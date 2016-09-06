@@ -1,2 +1,2 @@
 # becl3codes
-This file conains
+Repository contains the codes for BE Computer Science 2012 course under Pune University For Computer Laboratory 1 Subject.
