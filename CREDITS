@@ -1,0 +1,41 @@
+Computer Lab III : 
+
+-------------- Group A --------------
+
+1. Binary Search (Modelio)	:	Thanx to Krushna for explaining how to use Modelio.
+
+2. QuickSort			:	Thanx to great algorithm from book 'Data Structures in C++' by Fourozon
+					which I've used in mine version of code. &
+					thanx to tutorials point for information on XML manipulation through java.
+
+3. Booths Algorithm		:	Thanx to Harish for servlet controller code, which I've used. &
+					Thanx to GitHub for Simplified Booths Algorithm implementation in Java which
+					I've somewhat modified as per requirements.
+
+4. Dinning Philosopher		:	Thanx to Piyush for code.
+
+5. Trignometric Calculator	:	Thanx to Gayatri for its Android version.
+					Thanx to w3school tutorials without which HTML version could'nt be possible.
+
+-------------- Group B --------------
+
+1. Eight Queens			:	Thanx to Piyush for one of the version of code. &
+					Thanx to great algorithm from book 'Fundamental of algorithms' by H & S
+					which I've used in mine version of code.
+					Thanx to harish for modifying code to place input queen in any row.
+					
+3. Calculator Mem call-Recall	:	Thanx to Gayatri for its android version. &
+					Thanx to w3school tutorials without which HTML version could'nt be possible.
+
+4. Plagarism			:	Thanx to Piyush for code.
+
+-------------- ELECTIVE III CYBER_SECURITY --------------
+
+A6.   Encryption Techniques	:	Thanx to unknown author for Ceaser Cipher code & 
+					thanx to GitHub for simplified implementation of PlayFair Cipher.
+
+B-D1. SHA1			:	Thanx to Sumit for python version of this code. I've modified it somewhat
+					to meet requirements as per syllabus
+
+B-D2. PseudoRandom Gen.		:	Unkown Auther
+B-D4. Miller-Rabin		:	Unkown Auther

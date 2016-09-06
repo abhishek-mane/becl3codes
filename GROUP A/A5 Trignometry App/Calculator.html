@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>Calculator</title>
+		<style>
+			input.num{
+				height: 50px; width: 50px; margin-bottom: 5px; border: 1px solid black;
+			}
+			input.tg{
+				height: 50px; width: 60px; margin-bottom: 5px; border: 1px solid black;
+			}
+			input.tgi{
+				height: 50px; width: 60px; margin-bottom: 5px; border: 1px solid black;
+			}
+			input#display-box{
+				width: 426px; height:70px; margin-bottom: 5px;
+				margin-left: 20px; border: 2px solid #222;
+				padding: 20px; font-size: 30px; background: white;
+			}
+		</style>
+		<script type="text/javascript" src="jquery.js"></script>
+	</head>
+	<body>
+		<!-- Design part HTML -->
+		<div>
+			<input id="display-box" type="text" disabled/><br/>
+			<div style="text-align:center; margin-left:20px;">
+				<div style="float:left;">
+					<input type="button" class="tg" value="sin"/>
+					<input type="button" class="tg" value="cos"/><br/>
+					<input type="button" class="tg" value="tan"/>
+					<input type="button" class="tg" value="sec"/><br/>
+					<input type="button" class="tg" value="cosec"/>
+					<input type="button" class="tg" value="cot"/>
+				</div>
+				
+				<div style="float: left; margin-left: 10px; margin-right:10px;">
+					<input class="num" type="button" value="1"/>
+					<input class="num" type="button" value="2"/>
+					<input class="num" type="button" value="3"/><br/>
+					<input class="num" type="button" value="4"/>
+					<input class="num" type="button" value="5"/>
+					<input class="num" type="button" value="6"/><br/>
+					<input class="num" type="button" value="7"/>
+					<input class="num" type="button" value="8"/>
+					<input class="num" type="button" value="9"/><br/>
+					<input class="num" type="button" value="AC"/>
+					<input class="num" type="button" value="0"/>
+					<input class="num" type="button" value="."/><br/>
+					<input class="num" type="button" value="-"/>
+				</div>
+				<div style="float:left;">
+					<input type="button" class="tgi" value="sin-1">
+					<input type="button" class="tgi" value="cos-1"><br/>
+					<input type="button" class="tgi" value="tan-1">
+					<input type="button" class="tgi" value="cosec-1"><br/>
+					<input type="button" class="tgi" value="sec-1">
+					<input type="button" class="tgi" value="cot-1"><br/>
+					<input type="button" class="tgi" value="STORE">
+					<input type="button" class="tgi" value="RETRV">
+				</div>
+			</div>
+		</div>
+		<!-- Design end -->
+	</body>
+	<!-- JavaScript Event handlers -->
+	<script type="text/javascript">
+		// if trignometric button is clicked
+		$(".tg").click(
+			function(){
+				var input = parseFloat($("#display-box").val());
+				var str = $(this).val();
+				var res;
+				switch(str){
+					case "sin":   res = Math.sin(input); break;
+					case "cos":   res = Math.cos(input); break;
+					case "tan":   res = Math.tan(input); break;
+					case "sec":   res = 1/Math.cos(input); break;
+					case "cosec": res = 1/Math.sin(input); break;
+					case "cot":   res = 1/Math.tan(input); break;
+				}
+				$("#display-box").val(""+res);
+			}
+		);
+		// if number button is clicked
+		$(".num").click(
+			function(){
+				var str = $(this).val();
+				switch(str){
+					case "0": $("#display-box").val($("#display-box").val()+"0"); break;
+					case "1": $("#display-box").val($("#display-box").val()+"1"); break;
+					case "2": $("#display-box").val($("#display-box").val()+"2"); break;
+					case "3": $("#display-box").val($("#display-box").val()+"3"); break;
+					case "4": $("#display-box").val($("#display-box").val()+"4"); break;
+					case "5": $("#display-box").val($("#display-box").val()+"5"); break;
+					case "6": $("#display-box").val($("#display-box").val()+"6"); break;
+					case "7": $("#display-box").val($("#display-box").val()+"7"); break;
+					case "8": $("#display-box").val($("#display-box").val()+"8"); break;
+					case "9": $("#display-box").val($("#display-box").val()+"9"); break;
+					case ".": $("#display-box").val($("#display-box").val()+"."); break;
+					case "AC": $("#display-box").val(""); break;
+					case "-" : $("#display-box").val(""+(-$("#display-box").val()));
+				}
+			}
+		);
+		// if inverse trignometric button is clicked
+		$(".tgi").click(
+			function(){
+				var input = parseFloat($("#display-box").val());
+				var str = $(this).val();
+				var res;
+				switch(str){
+					case "sin-1":   res = Math.asin(input); break;
+					case "cos-1":   res = Math.acos(input); break;
+					case "tan-1":   res = Math.atan(input); break;
+					case "sec-1":   res = 1/Math.acos(input); break;
+					case "cosec-1": res = 1/Math.asin(input); break;
+					case "cot-1":   res = 1/Math.atan(input); break;
+					case "STORE":	localStorage.setItem('storedData', input+''); res="STORED"; break;
+					case "RETRV":	res = localStorage.getItem('storedData'); break;
+				}
+				$("#display-box").val(""+res);
+			}
+		);
+	</script>
+	<!-- JavaScript ends -->
+</html>
